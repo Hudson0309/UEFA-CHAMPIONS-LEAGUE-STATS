@@ -46,4 +46,65 @@ public class teams {
 			}
 	}
 	
+	void addTeams(String tName,String tCountry,String tLeague){
+		String url = "jdbc:mysql://localhost/team";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+		} catch(java.lang.ClassNotFoundException e) {
+			System.err.print("ClassNotFoundException: ");
+			System.err.println(e.getMessage());
+		}
+
+		try {
+			con = DriverManager.getConnection(url, "root", "root");
+			stmt = con.createStatement();
+   		    stmt.executeUpdate("insert into teamDetails values("+tName+","+tCountry+","+tLeague);
+   		    	
+		    	
+   		    	
+		} catch(SQLException ex) {
+			System.err.println("SQLException: " + ex.getMessage());
+		}finally{
+			try{
+				stmt.close();
+				con.close();
+			}catch(SQLException e){}
+		}
+		
+		
+	}
+	
+	void deleteTeams(String tName){
+		String url = "jdbc:mysql://localhost/team";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+		} catch(java.lang.ClassNotFoundException e) {
+			System.err.print("ClassNotFoundException: ");
+			System.err.println(e.getMessage());
+		}
+
+		try {
+			con = DriverManager.getConnection(url, "root", "root");
+			stmt = con.createStatement();
+   		    stmt.executeUpdate("delete from teamDetails where"+name+"="+tName);
+   		    	
+		    	
+   		    	
+		} catch(SQLException ex) {
+			System.err.println("SQLException: " + ex.getMessage());
+		}finally{
+			try{
+				stmt.close();
+				con.close();
+			}catch(SQLException e){}
+		}
+		
+		
+	}
+	
+	
 }
