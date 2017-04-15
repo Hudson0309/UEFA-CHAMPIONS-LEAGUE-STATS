@@ -33,6 +33,14 @@
 			<form action="addTeam.jsp">
 			<input style="color:blue" value="Add Team" type="submit" name="addTeam"/>
 			</form>
+			
+			<form action="deleteTeam.jsp">
+			<input style="color:blue" value="Delete Team" type="submit" name="deleteTeam"/>
+			</form>
+			
+			<form action="insertResult.jsp">
+			<input style="color:blue" value="Insert Result" type="submit" name="insertResult"/>
+			</form>
 		
 		</div>
 </body>

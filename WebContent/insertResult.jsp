@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="ResultServlet">
+<form action="InsertResultServlet">
 Home Team:<input type="text" name="tHomeTeam">
-Away Team:<input type="text" name="tHomeTeam">
+Away Team:<input type="text" name="tAwayTeam">
 Goals Scored By Home Team:<input type="text" name="goalsByTeam1">
 Goals Scored By Away Team:<input type="text" name="goalsByTeam2">
-<input style="color:blue" value="Add Team" type="submit" name="addTeam">
+<input style="color:blue" value="Inser Result" type="submit" name="InsertResultServlet">
 </form>
 
 </body>

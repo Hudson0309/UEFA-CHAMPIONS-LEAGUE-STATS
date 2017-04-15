@@ -26,7 +26,10 @@ public class loginProcess{
 			}
 
 			try {
-				con = DriverManager.getConnection(url, "root", "12438630");
+				System.out.println('f');
+				
+				con = DriverManager.getConnection(url, "root", "root");
+				System.out.println("fuck");
 				stmt = con.createStatement();
 	   		    ResultSet rs=stmt.executeQuery("select * from users");
 	   		    while(rs.next())  
